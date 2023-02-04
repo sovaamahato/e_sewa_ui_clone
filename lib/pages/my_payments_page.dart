@@ -6,7 +6,8 @@ class MyPaymentsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("My Payments")),
+      backgroundColor: Colors.black,
+      body: Center(child: Text("My Payments",style: TextStyle(color: Colors.white),)),
     );
   }
 }

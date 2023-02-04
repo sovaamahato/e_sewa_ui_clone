@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../pages/notifications_page.dart';
 import '../pages/profile_page.dart';
+import '../pages/search_page.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({Key? key}) : super(key: key);
@@ -28,16 +30,31 @@ class MyAppBar extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Icon(
-                Icons.search,
-                color: Colors.white,
+              GestureDetector(
+                onTap: (){
+                  showSearch(context: context, delegate: SearchPage());
+                },
+                child: Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
-              Icon(
-                Icons.notifications_outlined,
-                color: Colors.white,
+
+
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                    return NotificationsPage();
+                  }));
+                  
+                },
+                child: Icon(
+                  Icons.notifications_outlined,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(
                 width: 10,

@@ -7,6 +7,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.grey[900],
         elevation: 0,
@@ -17,7 +18,7 @@ class ProfilePage extends StatelessWidget {
             children: [
               Container(
                 color: Colors.black,
-                height: MediaQuery.of(context).size.height / 2.6,
+                height: MediaQuery.of(context).size.height/2.6,
               ),
               Container(
                 height: MediaQuery.of(context).size.height / 2.9,
@@ -28,6 +29,9 @@ class ProfilePage extends StatelessWidget {
                       bottomRight:Radius.circular(15) ,
                     )),
               ),
+              
+
+              
               //blackbox-------------
               Positioned(
                 left: 10,
@@ -207,10 +211,75 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
+              
             ],
           ),
 
           //2nd box---
+          Positioned(
+                
+                left: 10,
+                right: 10,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal:10,vertical: 0),
+                    height:360,
+                    width: MediaQuery.of(context).size.width,
+                    
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: Colors.grey[900],),
+                    child: ListView(
+                      physics: NeverScrollableScrollPhysics(),
+                      children: [
+                      ListTile(
+                        leading: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Icon(Icons.computer_outlined,color: Colors.green,),
+                        ),
+                        title: Text("My Information",style: TextStyle(color: Colors.white),),
+                        subtitle: Text("View Your Personal Details",style: TextStyle(color: Colors.white70),),
+                        trailing: Icon(Icons.arrow_forward_ios,color: Colors.white70,size: 20,),
+                      ),
+                      ListTile(
+                        leading: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Icon(Icons.phonelink_lock_outlined,color: Colors.green,),
+                        ),
+                        title: Text("Devices & Credentials",style: TextStyle(color: Colors.white),),
+                        subtitle: Text("Manage devices,credentials & IDs",style: TextStyle(color: Colors.white70),),
+                        trailing: Icon(Icons.arrow_forward_ios,color: Colors.white70,size: 20,),
+                      ),
+                      ListTile(
+                        leading: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.home_outlined,color: Colors.green,),
+                        ),
+                        title: Text("My Bank Accounts",style: TextStyle(color: Colors.white),),
+                        subtitle: Text("Connected Banks",style: TextStyle(color: Colors.white70),),
+                        trailing: Icon(Icons.arrow_forward_ios,color: Colors.white70,size: 20,),
+                      ),
+                      ListTile(
+                        leading: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Icon(Icons.credit_card,color: Colors.green,),
+                        ),
+                        title: Text("My Limit",style: TextStyle(color: Colors.white),),
+                        subtitle: Text("View Your Transaction limit",style: TextStyle(color: Colors.white70),),
+                        trailing: Icon(Icons.arrow_forward_ios,color: Colors.white70,size: 20,),
+                      ),
+                      ListTile(
+                        leading: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Icon(Icons.logout,color: Colors.green,),
+                        ),
+                        title: Text("Logout",style: TextStyle(color: Colors.white),),
+                        subtitle: Text("Logout from eSewa app",style: TextStyle(color: Colors.white70),),
+                        trailing: Icon(Icons.arrow_forward_ios,color: Colors.white70,size: 20,),
+                      ),
+                    ]),
+                  ),
+                ),
+              ),
         
         ],
       ),
