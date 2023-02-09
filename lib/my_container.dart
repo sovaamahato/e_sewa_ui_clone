@@ -22,7 +22,7 @@ class _MyContainerState extends State<MyContainer> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-      width: 320,
+      width: MediaQuery.of(context).size.width/1.13,
       height: 125,
       child: Column(
         children: [

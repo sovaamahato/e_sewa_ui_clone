@@ -23,8 +23,8 @@ class MyAppBar extends StatelessWidget {
               radius: 25,
               child: ClipRRect(
                   borderRadius: BorderRadius.circular(30),
-                  child: Image.network(
-                      "https://pub-static.fotor.com/assets/projects/pages/d5bdd0513a0740a8a38752dbc32586d0/fotor-03d1a91a0cec4542927f53c87e0599f6.jpg")),
+                  child: Image.asset(
+                      "lib/images/shobha2.jpg",fit: BoxFit.cover)),
             ),
           ),
           Row(

@@ -35,7 +35,7 @@ class BigContainer extends StatelessWidget {
     return Container(
                         padding:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-                        height: 470,
+                        height: MediaQuery.of(context).size.height/1.57,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.grey[900]),

@@ -49,51 +49,47 @@ class _BottomBarState extends State<BottomBar> {
       child: Container(
           height: 65,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ButtonForBar(
-                        icon: Icons.home_outlined,
-                        buttonName: "Home",
-                        onPressed: () {},
-                      ),
-                      ButtonForBar(
-                        icon: Icons.note_alt_outlined,
-                        buttonName: "Statement",
-                        onPressed: openStatementPage,
-                      ),
-                    ],
+                  ButtonForBar(
+                    icon: Icons.home_outlined,
+                    buttonName: "Home",
+                    onPressed: () {},
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 6, top: 40),
-                    child: Text(
-                      "Scan & pay",
-                      style: TextStyle(color: Colors.white, fontSize: 10),
-                    ),
+                  ButtonForBar(
+                    icon: Icons.note_alt_outlined,
+                    buttonName: "Statement",
+                    onPressed: openStatementPage,
                   ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Row(
-                    children: [
-                      ButtonForBar(
-                        icon: Icons.calendar_month_outlined,
-                        buttonName: "My Payments",
-                        onPressed: openPaymentsPage,
-                      ),
-                      ButtonForBar(
-                        icon: Icons.note_add_outlined,
-                        buttonName: "Offers",
-                        onPressed: openOffersPage,
-                      ),
-                    ],
-                  )
                 ],
               ),
+              Padding(
+                padding: const EdgeInsets.only( top: 40),
+                child: Text(
+                  "Scan & pay",
+                  style: TextStyle(color: Colors.white, fontSize: 10),
+                ),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Row(
+                children: [
+                  ButtonForBar(
+                    icon: Icons.calendar_month_outlined,
+                    buttonName: "My Payments",
+                    onPressed: openPaymentsPage,
+                  ),
+                  ButtonForBar(
+                    icon: Icons.note_add_outlined,
+                    buttonName: "Offers",
+                    onPressed: openOffersPage,
+                  ),
+                ],
+              )
             ],
           )),
     );
